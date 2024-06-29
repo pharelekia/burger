@@ -1,9 +1,9 @@
-import Menus from "@/components/Menus.vue";
-import Burgers from "@/components/Burgers.vue";
-import Snacks from "@/components/Snacks.vue";
-import Salades from "@/components/Salades.vue";
-import Boissons from "@/components/Boissons.vue";
-import Desserts from "@/components/Desserts.vue";
+import Menus from "@/modules/cart/pages/Menus.vue";
+import Burgers from "@/modules/cart/pages/Burgers.vue";
+import Snacks from "@/modules/cart/pages/Snacks.vue";
+import Salades from "@/modules/cart/pages/Salades.vue";
+import Boissons from "@/modules/cart/pages/Boissons.vue";
+import Desserts from "@/modules/cart/pages/Desserts.vue";
 
 export const routes = [
     {path:'/', component: Menus},

@@ -2,7 +2,6 @@ export const cartStore = {
     namespaced: true,
 
     state: {
-        total: 1000,
         items: []
     },
 
@@ -12,13 +11,21 @@ export const cartStore = {
         },
 
         getTotal: state => {
-            return state.total;
+            let sum = 0;
+            for (const el of state.items) {
+                sum += el.price;
+            }
+            return sum
         }
     },
 
     mutations: {
         SET_ITEM: (state, item) => {
             state.items.unshift(item)
+        },
+
+        REMOVE_ITEM: (state, index) => {
+            state.items.splice(index, 1)
         }
     }
 
