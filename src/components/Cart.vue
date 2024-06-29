@@ -1,24 +1,18 @@
 <template>
-    <div>
-        <h1>Cart...</h1>
-        <div>{{ getData }}</div>
-    </div>
+  <div class="bg-gray-200 p-6 border-2">
+    <h1>Cart...</h1>
+    <div></div>
+  </div>
 </template>
 
 <script>
-    export default{
-        computed:{
-            getData(){
-                localStorage.getItem('cart')
-            }
-        }
-    }
-</script>
+import {mapGetters} from "vuex";
 
-<style scoped>
-    div{
-        width: 50%;
-        margin: auto;
-        border: 1px solid red;
-    }
-</style>
+export default {
+  computed: {
+    ...mapGetters({
+      items: "cartStore/getItems"
+    })
+  }
+}
+</script>
